@@ -8,9 +8,11 @@
 
 using namespace std;
 
-int minimo(int i, int j, int D[100][100], int d[100]){
-  int min;
-  
+int minimo(int i, int j, int D[100][100], int d[100], int n){
+
+  /*Esta función calcula el valor mínimo entre los diversos valores de:
+		D[i][k] + D[k+1][j] + d[i-1]*d[k]*d[j]
+		para k desde i hasta j-1 */
 }
 
 
@@ -19,7 +21,7 @@ int MultiplicacionM(int d[100], int D[100][100], int n){
   for(int diag = 1; diag<=n-1; diag++){
     for(int i = 1; i <= n-diag; i++){
       j = i + diag;
-      D[i][j] = minimo(i, j, D, d);
+      D[i][j] = minimo(i, j, D, d, n);
     }
   }
   return D[1][n];
