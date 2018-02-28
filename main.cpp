@@ -46,6 +46,5 @@ int main(){
   for(int i = 0; i <= Cut+1; i++){
     Adyacentes[i][i] = 0;
   }
-
   return 0;
 }
